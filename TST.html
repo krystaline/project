@@ -5,30 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>TST Stock</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-               
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#Warehouse Inventory">Warehouse Inventory</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Customer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Supplier</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Form</a>
-            </li>
-        </ul>
-</nav> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+    <h1>Stock</h1>
+  </nav> 
+  
 <div class="container">
   <div class="row">
-      <div class="col-2">      
-          <table class="table">  
+      <div class="col-lg-2">    
+          <table class="table table-hover table-fixed table-bordered" style ="height:200px; display:block; overflow-y:scroll; width:100%;">  
             <thead>
               <tr>
                 <th>Item Name</th>
@@ -41,6 +30,10 @@
                 <td>Doe</td>
               </tr>
               <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                </tr>
+              <tr>
                 <td>Mary</td>
                 <td>Moe</td>
               </tr>
@@ -51,8 +44,8 @@
             </tbody>
           </table>
         </div>
-        <div class="col-5">      
-            <table class="table">
+        <div class="col-lg-5">      
+            <table class="table table-hover table-fixedheader table-bordered" style ="height:200px; display:block; overflow-y:scroll; width:100%;">
               <thead>
                 <tr>
                   <th>Customer Name</th>
@@ -80,8 +73,8 @@
               </tbody>
             </table>
           </div>
-          <div class="col-5">     
-            <table class="table">
+          <div class="col-lg-5">     
+            <table class="table table-hover table-fixedheader table-bordered" style ="height:200px; display:block; overflow-y:scroll; width:100%;">
               <thead>
                 <tr>
                   <th>Supplier Name</th>
@@ -108,6 +101,7 @@
                 </tr>
               </tbody>
             </table>
+
           </div>
   </div>
 </div>
@@ -115,52 +109,31 @@
     <form>
         <div class="container" id="Form">
           <div class="row">
-           <div class="col">
+           <div class="col-sm">
               <label>Item Name</label>
-              <input type="text" class="form-control" id="Item" placeholder="Enter Item Name">
-            </div>
-            <div class="col">
+              <input type="text"  id="Item" placeholder="Enter Item Name">
               <label>Item Quantity</label>
-              <input type="number" class="form-control" id="Quantity" placeholder="Enter Quantity">
+              <input type="number" id="Quantity" placeholder="Enter Quantity">
             </div>
-            <div class="col">
-                <label>Customer Name</label>
-                <input type="text" class="form-control" id="Customer Name" placeholder="Enter Customer Name">
-              </div>
-              <div class="col">
-                <label>Item Name</label>
-                <input type="text" class="form-control" id="Item" placeholder="Enter Item Name">
-              </div>
-              <div class="col">
-                <label>Quantity Sold</label>
-                <input type="number" class="form-control" id="Quantity Sold" placeholder="Enter Quantity">
-              </div>
-              <div>
-                <label>Sales Date</label>
-                <input type="date" class="form-control" id="Sales Date" placeholder="Enter Date"> 
-              </div>
-              <div>
-                  <label>Supplier Name</label>
-                  <input type="text" class="form-control" id="Supplier Name" placeholder="Enter Supplier Name">
-                </div>
-                <div>
-                  <label>Item Name</label>
-                  <input type="text" class="form-control" id="Item" placeholder="Enter Item Name">
-                </div>
-                <div>
-                  <label>Quantity Purchased</label>
-                  <input type="number" class="form-control" id="Quantity Purchased" placeholder="Enter Quantity">
-                </div>
-                <div>
-                    <label>Purchase Date</label>
-                    <input type="date" class="form-control" id="Purchase Date" placeholder="Enter Date"> 
-                  </div>
           </div>
-
-    
-
-
-              <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-sm">
+                <label>Customer Name</label>
+                <input type="text"  id="Customer Name" placeholder="Enter Customer Name">
+                <label>Quantity Sold</label>
+                <input type="number" id="Quantity Sold" placeholder="Enter Quantity">
+                <label>Sales Date</label>
+                <input type="date" id="Sales Date" placeholder="Enter Date"> 
+              </div>
+            </div>
+              <div class="col-sm">
+                  <label>Supplier Name</label>
+                  <input type="text" id="Supplier Name" placeholder="Enter Supplier Name">
+                  <label>Quantity Purchased</label>
+                  <input type="number" id="Quantity Purchased" placeholder="Enter Quantity">
+                    <label>Purchase Date</label>
+                    <input type="date" id="Purchase Date" placeholder="Enter Date"> 
+                  </div>
+              <button type="submit" class="btn btn-primary ">Submit</button>
         </div>
         </form>
 </div>

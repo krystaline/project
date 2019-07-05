@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <title>Stock</title>
+  <style>
+      .footer {
+         position: static;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         background-color: black;
+         color: white;
+         text-align: center;
+      }
+      
+      </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+    <h1>Stock</h1>
+  </nav>
+  <div class="container" style="margin-top: 2em;">
+      <img src="image/logo.jpeg" style="width: auto; margin-left: 20%;" alt="PT.Trimitra Sejati Tanindo" >
+  </div>
+  <div class="jumbotron jumbotron-fluid" style="background-image: url(image/inventory-management.jpeg); background-size: cover">
+      <div class="container">
+        <h1 class="display-4" style="text-align:center;">About This Page</h1>
+        <p class="lead" style="text-align:center;" >This is web will help the stock control system of a company.</p>
+      </div>
+    </div>
+  <div class="container " style="margin-top: 2em;">
+    <div class="row">
+      <div class="col-lg-4 ">
+        <table class="table table-hover table-fixed table-bordered "
+          style="height:200px; display:block; overflow-y:scroll; width:100%; text-align:center ">
+          <thead >
+            <tr>
+              <th style='padding-left: 2.5em; padding-right: 2.5em;'>Item Name</th>
+              <th style='padding-left: 2.5em; padding-right: 2.5em;'>Item Quantity</th>
+            </tr>
+          </thead>
+       
+              <tbody id="first">
+
+                  <!-- ===========first============ -->
+      
+                </tbody>
+  
+
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <table class="table table-hover table-fixedheader table-bordered"
+          style="height:200px; display:block; overflow-y:scroll; width:100%; text-align:center">
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Sales Quantity</th>
+              <th>Sales Date</th>
+            </tr>
+          </thead>
+          <tbody id="second">
+
+            <!-- ===========second============ -->
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <table class="table table-hover table-fixedheader table-bordered"
+          style="height:200px; display:block; overflow-y:scroll; width:100%; text-align:center">
+          <thead>
+            <tr>
+              <th>Supplier Name</th>
+              <th>Purchase Quantity</th>
+              <th>Purchase Date</th>
+            </tr>
+          </thead>
+          <tbody id="third">
+
+            <!-- ===========third============ -->
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <form>
+      <h3 class="text-center" style="margin-top: 1em;">Update Stock</h3>
+      <div class="container" id="Form">
+        <div class="row">
+          <div class="col-sm">
+            <label>Item Name</label>
+            <input id="item" type="text" id="Item" placeholder="Enter Item Name" class="form-control">
+          </div>
+          <div class="col-sm">
+            <label>Item Quantity</label>
+            <input id="stock" type="number" id="Quantity" placeholder="Enter Quantity" class="form-control">
+         </div>
+        </div>
+        <div class="row" style="margin-top: 1em;">
+         <div class="col-sm">
+            <label>Customer Name</label>
+            <input id="customer" type="text" id="Customer Name" placeholder="Enter Customer Name" class="form-control">
+          </div>
+          <div class="col-sm">
+            <label>Quantity Sold</label>
+            <input id="customer-quantity" type="number" id="Quantity Sold" placeholder="Enter Quantity" class="form-control">
+          </div>
+          <div class="col-sm">
+            <label>Sales Date</label>
+            <input id="sales-date" type="date" id="Sales Date" placeholder="Enter Date" class="form-control">
+          </div>
+        </div>
+      <div class="row" style="margin-top: 1em;">
+      <div class="col-sm">
+        <label>Supplier Name</label>
+        <input id="supplier" type="text" id="Supplier Name" placeholder="Enter Supplier Name" class="form-control">
+      </div>
+      <div class="col-sm">
+        <label>Quantity Purchased</label>
+        <input id="supplier-quantity" type="number" id="Quantity Purchased" placeholder="Enter Quantity" class="form-control">
+      </div>
+      <div class="col-sm">
+        <label>Purchase Date</label>
+        <input id="purchase-date" type="date" id="Purchase Date" placeholder="Enter Date" class="form-control">
+      </div>
+      </div>
+      </div>
+      <div class="row" style="margin-top: 2em;" >
+        <div class="col text-center" >
+          <input id="submit-button" type="button" class="btn btn-primary justify-content-center" name="register" value="Submit">
+        </div>
+      </div>
+</div>
+<div class="footer" style="margin-top: 4em;">
+  <div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Contact </h3>
+    </div>
+    <div class="col">
+        <h3>About the company </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+          <img src="image/phone.png" display="block" width="20em" alt="phone">
+          <p>(021) 4217680</p>
+          <img src="image/location.jpg" display="block" width="40em" alt="location">
+          <p>Graha Cempaka Mas Complex Block B No. 18, JL Letjen. Suprapto, No. 10, Cempaka Putih, RW.8, Sumur Batu, Jakarta Pusat, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10640</p>
+      </table>
+    </div>
+    <div class="col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci tellus, ultrices ac sollicitudin sed, pellentesque in neque. Cras tristique, odio at lacinia laoreet, lectus ex hendrerit mauris, ut bibendum felis orci vel quam. Aliquam sit amet velit aliquet, feugiat dui eget, ullamcorper massa. Pellentesque sed aliquet sem, eu fermentum lorem. Proin eget mauris diam. Curabitur iaculis lorem eu odio viverra, a consequat metus tristique. Aenean venenatis, sapien eu iaculis porta, diam tellus pellentesque enim, quis tristique justo nunc id ex. Curabitur erat enim, accumsan ac nunc ut, finibus blandit nisi. Curabitur imperdiet orci eu feugiat convallis. Duis eu metus et felis dapibus feugiat. Mauris sollicitudin condimentum lorem ut porttitor. Aliquam erat volutpat. Fusce ut nisi quis orci volutpat vestibulum non sit amet turpis. Aenean congue mauris eu facilisis rhoncus. Sed sodales eros non dolor rutrum, at tempor lacus pretium.</p>
+    </div>
+    </div>
+  </div>
+  </div>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  <script> performGetRequest1() </script>
+
+</body>
+
+</html>
